@@ -1,0 +1,12 @@
+<div class="card bg-light mb-3">
+    <div class="card-header text-center">
+        <h5>Категория товара: {{ app.category }}</h5>
+     </div>
+    <div class="card-body">
+        <h5 class="card-title">Статус заказа: {{ app.status }}</h5>
+        <p class="card-text">Дата заказа: {{ app.created }}</p>
+    </div>
+    <div class="card-footer text-right">
+        <a href="{% url 'application:app_detail' app.pk %}" class="btn btn-primary">Подробная информация</a>
+    </div>
+</div>

@@ -1,0 +1,12 @@
+.product {
+        margin-bottom: 20px;
+    }
+
+.delete-product {
+    float: right;
+    margin-top: 20px;
+}
+
+.card-footer {
+        margin-bottom: 20px;
+    }

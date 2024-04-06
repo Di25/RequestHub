@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block title %}{{ title }}{% endblock %}
+{% block content %}
+    {% for app in page_obj %}
+        {% include 'application/includes/application_list.html' %}
+    {% empty %}
+        <p>Нет заявок</p>
+        {% if not forloop.last %}<hr>{% endif %}
+    {% endfor %}
+    {% include 'application/includes/paginator.html' %}
+{% endblock %}
