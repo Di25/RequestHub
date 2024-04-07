@@ -3,7 +3,7 @@ from django.contrib.auth.decorators import login_required
 from django.core.paginator import Paginator
 from django.shortcuts import render, redirect, get_object_or_404
 
-from RequestHub import settings
+from config import settings
 from application.forms import ApplicationForm, ObjectsForm
 from application.models import Application, ApplicationProduct, ProductWarehouse
 from application.utils import check_deals_address, create_deals

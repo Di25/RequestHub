@@ -16,7 +16,7 @@ Including another URLconf
 """
 from django.urls import path, include
 
-from RequestHub import settings
+from config import settings
 from application.admin import bot_admin
 from django.conf.urls.static import static
 

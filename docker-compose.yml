@@ -30,7 +30,7 @@ services:
     ports:
       - "80:80"
     volumes:
-      - ./RequestHub/media:/app/media
+      - ./media:/app/media
     networks:
       - site
     restart: always
