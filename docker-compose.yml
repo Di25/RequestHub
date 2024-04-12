@@ -39,9 +39,6 @@ services:
     depends_on:
       - db
 
-
-
-
 networks:
   site:
     driver: bridge

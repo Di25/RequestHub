@@ -6,8 +6,8 @@
     <div class="row justify-content-center">
         <div class="col-md-8 p-5">
             <form method="post" action="{% url 'application:app_create' %}" enctype="multipart/form-data">
-                <div class="card">
-                    <div class="card-header">{{ title }}</div>
+                <div class="card main-content form-container">
+                    <h1 class="card-header">{{ title }}</h1>
                     <div class="card-body">
                         {% load user_filters %}
                         {% if form.errors %}
@@ -33,7 +33,7 @@
                                         <span class="required text-danger">*</span>
                                     {% endif %}
                                 </label>
-                                {{ field|addclass:'form-control' }}
+                                {{ field|addclass:'form-control input-field' }}
                                 {% if field.help_text %}
                                     <small
                                             id="{{ field.id_for_label }}-help"
@@ -52,7 +52,7 @@
                                     <div class="col-lg-6">
                                         <div class="form-group">
                                             <label for="product_1">Название товара:</label>
-                                            <select name="product_1" id="product_1" class="form-control" required>
+                                            <select name="product_1" id="product_1" class="form-control input-field" required>
                                                 <option value="">Выберите продукт</option>
                                                 {% for product in products %}
                                                     <option value="{{ product.id }}"
@@ -65,19 +65,19 @@
                                     <div class="col-lg-6">
                                         <div class="form-group">
                                             <label for="number_1">Количество</label>
-                                            <input type="number" name="number_1" id="number_1" class="form-control"
+                                            <input type="number" name="number_1" id="number_1" class="form-control input-field"
                                                    required>
                                         </div>
                                         <label for="image_1">Образец продукта</label>
-                                        <input type="file" name="image_1" id="image_1" class="form-control" accept=".jpg,.png" required>
+                                        <input type="file" name="image_1" id="image_1" class="form-control input-field" accept=".jpg,.png" required>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="card-footer text-right">
-                        <button type="submit" class="btn btn-primary add-product">Добавить товар</button>
-                        <button type="submit" class="btn btn-success float-right">Сохранить</button>
+                        <button type="submit" class="btn btn-primary add-product submit-btn">Добавить товар</button>
+                        <button type="submit" class="btn btn-success float-right submit-btn">Сохранить</button>
                         <p>Предварительная цена: <span id="total-price">0 руб.</span></p>
                     </div>
                 </div>
