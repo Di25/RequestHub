@@ -4,7 +4,7 @@
     height: 100px;
     top: 0;
     left: 0;
-    background: rgba(58, 51, 48, 0.9);
+    background: rgba(58, 51, 49, 1);
     backdrop-filter: blur(10px); /* Минимальная поддержка браузерами */
     border-bottom: 1px solid rgba(255, 255, 255, 0.12);
     padding: 0 40px; /* Добавьте отступы по бокам, если необходимо */

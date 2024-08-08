@@ -56,7 +56,7 @@ def application_create(request):
     form = ApplicationForm()
     return render(request, 'application/create_application.html', {
         'form': form,
-        'title': 'Формирование заказа',
+        'title': 'Новая заявка',
         'products': ProductWarehouse.objects.all(),
     })
 
@@ -106,3 +106,4 @@ def bitrix_deals(request):
         'form': form,
         'title': 'Привязать объект'
     })
+

@@ -4,7 +4,7 @@
 <div class="row justify-content-center">
     <div class="col-md-8 p-5">
         <div class="card main-content form-container">
-            <h1 class="card-header">Зарегистрироваться</h1>
+            <h1 class="card-header">Регистрация</h1>
             <div class="card-body">
                 {% load user_filters %} {# Загружаем фильтры #}
                 {% if form.errors %}
@@ -28,14 +28,14 @@
                     {% for field in form %}
                         <div class="form-group row my-3">
                             <label for="{{ field.id_for_label }}">
+                                <span class="required text-danger">*</span>
                                 {{ field.label }}
                                 {% if field.field.required %}
-                                    <span class="required text-danger">*</span>
                                 {% endif %}
                             </label>
                             {# К полю ввода добавляем атрибут class #}
                             {{ field|addclass:'form-control input-field' }}
-                            {% if field.help_text %}
+                            {% if field.errors %}
                                 <small
                                         id="{{ field.id_for_label }}-help"
                                         class="form-text text-muted"
@@ -46,7 +46,8 @@
                         </div>
                     {% endfor %}
                     <div class="col-md-6 offset-md-4">
-                        <button type="submit" class="btn btn-primary submit-btn">
+                        <button style="left:-75%;margin-left:-66.5%;
+                        width:586px;height:52px;" type="submit" class="btn btn-primary submit-btn">
                             Зарегистрироваться
                         </button>
                     </div>

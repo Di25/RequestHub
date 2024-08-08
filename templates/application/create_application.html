@@ -28,9 +28,10 @@
                         {% for field in form %}
                             <div class="form-group row my-3">
                                 <label for="{{ field.id_for_label }}">
+                                    <span class="required text-danger">*</span>
                                     {{ field.label }}
                                     {% if field.field.required %}
-                                        <span class="required text-danger">*</span>
+                                        
                                     {% endif %}
                                 </label>
                                 {{ field|addclass:'form-control input-field' }}
@@ -51,9 +52,11 @@
                                 <div class="row">
                                     <div class="col-lg-6">
                                         <div class="form-group">
-                                            <label for="product_1">Название товара:</label>
+                                           <!-- <label for="product_1">Название товара:</label>-->
                                             <select name="product_1" id="product_1" class="form-control input-field" required>
-                                                <option value="">Выберите продукт</option>
+                                                
+                                                <option value="">Выбрать товар</option>
+                                                
                                                 {% for product in products %}
                                                     <option value="{{ product.id }}"
                                                             data-price="{{ product.product.price }}"
@@ -62,7 +65,25 @@
                                             </select>
                                         </div>
                                     </div>
+                                    <h3>Товар 2</h3>
+                                <img id="image-preview_1" src="" alt="" style="max-width: 30%; height: auto;  display: none;">
+                                <div class="row">
                                     <div class="col-lg-6">
+                                        <div class="form-group">
+                                           <!-- <label for="product_1">Название товара:</label>-->
+                                            <select name="product_1" id="product_1" class="form-control input-field" required>
+                                                
+                                                <option value="">Выбрать товар</option>
+                                                
+                                                {% for product in products %}
+                                                    <option value="{{ product.id }}"
+                                                            data-price="{{ product.product.price }}"
+                                                            data-image-url="{{ product.product.photo.url }}">{{ product }}</option>
+                                                {% endfor %}
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <!--<div class="col-lg-6">
                                         <div class="form-group">
                                             <label for="number_1">Количество</label>
                                             <input type="number" name="number_1" id="number_1" class="form-control input-field"
@@ -70,15 +91,24 @@
                                         </div>
                                         <label for="image_1">Образец продукта</label>
                                         <input type="file" name="image_1" id="image_1" class="form-control input-field" accept=".jpg,.png" required>
-                                    </div>
+                                    </div>-->
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="card-footer text-right">
-                        <button type="submit" class="btn btn-primary add-product submit-btn">Добавить товар</button>
-                        <button type="submit" class="btn btn-success float-right submit-btn">Сохранить</button>
-                        <p>Предварительная цена: <span id="total-price">0 руб.</span></p>
+                    <div style="width:686px;height:116px;"><!--class="card-footer text-right"-->
+                       <!-- <button type="submit" class="btn btn-primary add-product submit-btn">Добавить товар</button> -->
+                        <button style="margin-top:18px;margin-left:-14px;border: none;
+    background-color:rgba(58, 51, 49, 1);
+    font: inter;
+    width: 339px;
+    height: 52px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21.78px;
+    border-radius: 13px;
+    color:rgba(255, 255, 255, 1);"type="submit" class="create-an-order">Создать заказ</button><!-- btn btn-success float-right! -->
+                        <p style="float:right;margin-top:35px;"><b>ИТОГО: <span id="total-price">0 руб.</b></span></p>
                     </div>
                 </div>
             </form>

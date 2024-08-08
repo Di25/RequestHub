@@ -32,18 +32,31 @@ body {
 }
 
 .main {
-    background: #3A3331;
+    background:#FFFFFF;
     flex: 1; /* Элемент <main> займет все доступное пространство */
     display: flex;
     flex-direction: column;
+    
 }
 
 
-.h1 {    
-    font-weight: 400;
-    font-size: 60px;
-    line-height: 70px;
+.h1 { 
+    font: inter;  
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 30.26px;
 }
+.card-header{
+    font: inter;  
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 30.26px;
+    color:rgba(37, 32, 29, 1);
+    background-color: #FFFFFF;
+    border:none;
+}
+
+
 
 .h2 {
     font-weight: 500;
@@ -57,51 +70,56 @@ body {
 }
 
 .main-content {
-    background-color: #2E2826; /* Темный фон для основного контента */
+    background-color: #FFFFFF; /* Светлый фон для основного контента */
     padding: 20px;
-    border-radius: 10px;
+    border:none;
+    color: rgba(37, 32, 29, 1);
+    font: inter;
 }
 
 .header, .footer {
-    background-color: #3A3331; /* Темный фон для заголовка и подвала */
+    background-color: rgba(58, 51, 49, 1); /* Темный фон для заголовка и подвала */
     color: #FFFFFF;
 }
+
 
 .form-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    
+    
 }
 
 .input-field {
     width: 100%;
-    padding: 10px;
-    margin-bottom: 20px;
-    border-radius: 10px;
-    border: 2px solid #EF6F2E; /* Граница в стиле проекта */
+    background-color: rgba(233, 229, 226, 1);
+    padding: 10px 15px 10px 15px;
+    margin-bottom: 10px;
+    border-radius: 8px;
     outline: none !important;
     
 }
 
-.input-field:hover {
+/*.input-field:hover {
     border: 2px solid #EF6F2E;
     outline: none !important;
     box-shadow: none !important;
-}
-
+}*/
+/*
 .input-field:focus {
-    border: 2px solid #EF6F2E; /* Остаётся тем же */
+    border: 2px solid #EF6F2E; /* Остаётся тем же 
     outline: none !important;
     box-shadow: none !important;
     appearance: none;
     -webkit-box-shadow: none !important;
     -moz-box-shadow: none !important;
-    -webkit-appearance: none; /* Это свойство отменяет стандартные стили для WebKit браузеров */
-    -moz-appearance: none; /* Это свойство отменяет стандартные стили для Mozilla браузеров */
+    -webkit-appearance: none;  Это свойство отменяет стандартные стили для WebKit браузеров 
+    -moz-appearance: none; /* Это свойство отменяет стандартные стили для Mozilla браузеров 
 
 }
-
+*/
 .btns-container {
     display: flex;
     gap: 1rem;
@@ -109,13 +127,43 @@ body {
 }
 
 .submit-btn {
-    background-color: #EF6F2E;
-    color: #FFFFFF;
+    background-color:rgba(58, 51, 49, 1);
+    color:rgba(255, 255, 255, 1);
+    font: inter;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21.78px;
+    padding:15px, 274px, 15px, 274px;
     border: none;
-    padding: 10px 20px;
-    border-radius: 100px;
+    border-radius: 13px;
     cursor: pointer;
     text-decoration: none;
+    gap: 10px;
+    
+    
+}
+
+.password-1{
+    display: flex;
+    justify-content: center;
+    font: inter;
+    text-decoration: none;
+    color:rgba(11, 153, 255, 1);
+    font-size: 18px;
+    font-weight: normal;
+    line-height: 21.78px;
+}
+.create-an-order{
+    border: none;
+    background-color:rgba(58, 51, 49, 1);
+    font: inter;
+    width: 339px;
+    height: 52px;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21.78px;
+    border-radius: 13px;
+    color:rgba(255, 255, 255, 1);
 }
 
 .submit-btn:hover {
@@ -124,6 +172,11 @@ body {
 }
 
 .policy-text {
-    color: rgba(255, 255, 255, 0.5); /* Полупрозрачный белый для текста политики */
+    color:rgba(255, 255, 255, 0.5); /* Полупрозрачный белый для текста политики */
     font-size: 14px;
 }
+.zvezda{
+    color: rgba(239, 111, 46, 1);
+    
+}
+

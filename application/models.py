@@ -112,6 +112,7 @@ class Application(models.Model):
     )
     address = models.TextField(
         verbose_name='Адрес доставки',
+        
     )
     status = models.CharField(
         verbose_name='Статус работы',
@@ -238,7 +239,7 @@ class Objects(models.Model):
         null=True
     )
     city = models.CharField(
-        verbose_name='Населенный пункт местонахождения объекта (город, поселок, станица и др.)',
+        verbose_name='Населенный пункт местонахождения объекта (город, поселок, станция и др.)',
         max_length=100
     )
     street = models.CharField(
@@ -250,20 +251,19 @@ class Objects(models.Model):
         max_length=100
     )
     dealer_name = models.CharField(
-        verbose_name='Наименование дилера',
+        verbose_name='Наименование диллера',
         max_length=100
     )
     manager = models.CharField(
-        verbose_name='Менеджер от дилера (ФИО И номер телефона)',
+        verbose_name='ФИО менеджера диллера',
         max_length=100
     )
     main_name = models.CharField(
-        verbose_name='ФИО, должность контактного лица с которым '
-                     'ведутся переговоры',
+        verbose_name='Должность лица с которым ведутся переговоры',
         max_length=100
     )
     main_phone = models.CharField(
-        verbose_name='Телефон контактного лица (Полностью без сокращений)',
+        verbose_name='Телефон контактного лица',
         max_length=100
     )
     full_address = models.CharField(
@@ -306,3 +306,7 @@ class Objects(models.Model):
 
     def __str__(self):
         return self.full_name_object
+    
+
+
+

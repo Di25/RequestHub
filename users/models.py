@@ -3,10 +3,11 @@ from django.db import models
 from django.utils.crypto import get_random_string
 
 
+
 class CustomUserManager(BaseUserManager):
     def create_user(self, email, password=None, **extra_fields):
         if not email:
-            raise ValueError('Пользователь с таким email же существует')
+            raise ValueError('Пользователь с таким email уже существует')
         username = get_random_string(20)
         user = self.model(username=username, email=email, **extra_fields)
         user.set_password(password)
@@ -20,12 +21,14 @@ class CustomUserManager(BaseUserManager):
 
 
 class CustomUser(AbstractUser):
-    email = models.CharField(verbose_name='Адрес электронной почты', max_length=255, unique=True)
+    email = models.CharField(verbose_name='E-mail', max_length=255, unique=True)
+
     # groups = models.ManyToManyField(Group, related_name="customuser_set")
     username = models.CharField(
         blank=True,
         null=True,
-        max_length=100
+        max_length=100,
+    
     )
     user_permissions = models.ManyToManyField(
         Permission,

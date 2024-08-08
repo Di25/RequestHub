@@ -37,9 +37,10 @@
                         {% for field in form %}
                             <div class="form-group row my-3">
                                 <label for="{{ field.id_for_label }}">
+                                    <span class="required text-danger">*</span>
                                     {{ field.label }}
                                     {% if field.field.required %}
-                                        <span class="required text-danger">*</span>
+                                        
                                     {% endif %}
                                 </label>
                                 {{ field|addclass:'form-control input-field' }}
@@ -54,7 +55,7 @@
                             </div>
                         {% endfor %}
                         <div class="d-flex justify-content-end">
-                            <button type="submit" class="btn btn-primary submit-btn">
+                            <button style="width:586px;height:52px;" type="submit" class="btn btn-primary submit-btn">
                                 Добавить
                             </button>
                         </div>

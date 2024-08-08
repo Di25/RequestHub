@@ -17,8 +17,9 @@
     {% if user.is_authenticated %}
     <aside>{% include 'includes/side-bar.html' %}</aside>
     {% else%}
-    <header>{% include 'includes/header.html' %}</header>
+    
     {% endif %}
+    <header>{% include 'includes/header.html' %}</header>
 <main class="main">
     <div class="container py-5 app">
         {% block content %} {% endblock %}

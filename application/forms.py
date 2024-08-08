@@ -1,7 +1,6 @@
 from django import forms
 from django.contrib.admin.widgets import AdminDateWidget
 from django.forms import inlineformset_factory, DateTimeInput, DateInput
-
 from application.models import Application, ApplicationProduct, Objects
 
 
@@ -9,6 +8,7 @@ class ApplicationForm(forms.ModelForm):
     class Meta:
         model = Application
         fields = ('full_name', 'phone_number', 'address')
+        
 
 
 class ApplicationProductForm(forms.ModelForm):
@@ -32,6 +32,10 @@ class ObjectsForm(forms.ModelForm):
         widget=forms.DateInput(attrs={'type': 'date'}),
         label='Дата поставки'
     )
+    
+    #from_email = forms.EmailField(required=True, widget=forms.TextInput(attrs={'placeholder':'yyhhjjj'}))
+    
+    
     full_address = forms.CharField(
         widget=forms.Textarea(),
         label='Полный адрес'
@@ -43,3 +47,7 @@ class ObjectsForm(forms.ModelForm):
                   'manager', 'main_name', 'main_phone', 'full_address',
                   'full_name_object', 'architect', 'investor', 'materials',
                   'stages', 'date_of_delivery', 'document')
+
+
+
+
